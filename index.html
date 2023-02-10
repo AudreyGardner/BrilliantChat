@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRILLIANT CHAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="mainSidebar">
+                <div class="singin">
+                    <input type="text" placeholder="USERNAME" id="USERNAME" />
+                    <input type="password" placeholder="PASSWORD" id="PASSWORD" />
+                </div>
+                <div class="btnContainer">
+                    <button onclick="singin()" class="singin-btn">SIGN-IN</button>
+                    <a href="register.html" class="register-btn">REGISTER</a>
+                </div>
+                <div id="msg"></div>
+            </div>
+        </div>
+        <div class="chatPanel">
+            <div class="textarea">
+                Brilliant Chat is a fantastic way to meet new people. When you use Brilliant Chat, you are paired with
+                another person at random to talk one-on-one. You will be paired with strangers who have compatible
+                astrological signs (for example, Taurus --> Scorpio, and so on). You will be able to rate each other
+                based on conversations at the end of each chat. Your ratings, as well as your astrological sign, will be
+                displayed on the right. All new users will begin with a rating of 5 stars.
+            </div>
+            <div class="actionContainer">
+                <div>
+                    <img src="/x.png" alt="" width="30px" />
+                </div>
+                <input type="text" class="message" />
+                <div>
+                    <img src="/v.png" alt="" width="30px" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRILLIANT CHAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="mainSidebar">
+                <div class="profile">
+                    <h3>Profile</h3>
+                    <p id="username"></p>
+                    <p>AQUARIUS</p>
+                    <p id="rating"></p>
+                </div>
+            </div>
+            <div>
+                <a href="index.html" class="singout-btn">SIGN-OUT</a>
+            </div>
+        </div>
+        <div class="chatPanel">
+            <div class="textarea" id="textarea">
+                
+            </div>
+            <div class="actionContainer">
+                <div>
+                    <img src="/x.png" alt="" width="30px" />
+                </div>
+                <input type="text" class="message" id="textMessage" />
+                <div onclick="addMessage()">
+                    <img src="/v.png" alt="" width="30px" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
