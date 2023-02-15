@@ -1,65 +1,20 @@
 <html>
-  <head>
-    <script>
-      const socket = new WebSocket('ws://localhost:3000');
-
-      socket.onopen = function(event) {
-        socket.send('Hello Server!');
-      };
-
-      socket.onmessage = function(event) {
-        const data = JSON.parse(event.data);
-
-        switch (data.type) {
-          case 'message':
-            displayMessage(data.username, data.message, data.rating);
-            break;
-        }
-      };
-
-      function sendMessage() {
-        const messageInput = document.getElementById('messageInput');
-        const ratingInput = document.getElementById('ratingInput');
-        const username = document.getElementById('username').value;
-
-        socket.send(
-          JSON.stringify({
-            type: 'message',
-            username,
-            message: messageInput.value,
-            rating: ratingInput.value
-          })
-        );
-
-        messageInput.value = '';
-        ratingInput.value = '';
-      }
-
-      function displayMessage(username, message, rating) {
-        const messagesContainer = document.getElementById('messagesContainer');
-
-        messagesContainer.innerHTML += `
-          <div>
-            <b>${username}:</b> ${message} (${rating} stars)
-          </div>
-        `;
-      }
-    </script>
-  </head>
-  <body>
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username">
-    </div>
-    <div>
-      <label for="messageInput">Message:</label>
-      <input type="text" id="messageInput">
-    </div>
-    <div>
-      <label for="ratingInput">Rating:</label>
-      <input type="number" id="ratingInput" min="1" max="5">
-    </div>
-    <button onclick="sendMessage()">Send</button>
-    <div id="messagesContainer"></div>
-  </body>
+<head>
+  <script type="module" src="chat.js"></script>
+</head>
+<body>
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+  </div>
+  <div>
+    <label for="messageInput">Message:</label>
+    <input type="text" id="messagesContainer">
+  </div>
+  <div>
+    <label for="ratingInput">Rating:</label>
+    <input type="number" id="ratingInput" min="1" max="5">
+  </div>
+  <button onclick="sendMessage()">Send</button>
+</body>
 </html>
