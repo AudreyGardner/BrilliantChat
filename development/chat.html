@@ -1,20 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <script type="module" src="chat.js"></script>
-</head>
-<body>
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" id="username">
-  </div>
-  <div>
-    <label for="messageInput">Message:</label>
-    <input type="text" id="messagesContainer">
-  </div>
-  <div>
-    <label for="ratingInput">Rating:</label>
-    <input type="number" id="ratingInput" min="1" max="5">
-  </div>
-  <button onclick="sendMessage()">Send</button>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>WebSockets - Simple chat</title>
+
+        <style>
+        * { font-family:tahoma; font-size:12px; padding:0px; margin:0px; }
+        p { line-height:18px; }
+        div { width:500px; margin-left:auto; margin-right:auto;}
+        #content { padding:5px; background:#ddd; border-radius:5px; overflow-y: scroll;
+                   border:1px solid #CCC; margin-top:10px; height: 160px; }
+        #input { border-radius:2px; border:1px solid #ccc;
+                 margin-top:10px; padding:5px; width:400px;  }
+        #status { width:88px; display:block; float:left; margin-top:15px; }
+        </style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <div>
+            <span id="status">Connecting...</span>
+            <input type="text" id="input"/>
+        </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="./frontend.js"></script>
+    </body>
 </html>
