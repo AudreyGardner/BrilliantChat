@@ -1,4 +1,4 @@
-const users = [{name:"admin",pass:123,email:"",rating:5}];
+const users = [{name:"admin",pass:123,email:"",}];
 const userNameTxt = document.getElementById("USERNAME");
 const passwordTxt = document.getElementById("PASSWORD");
 const emailTxt = document.getElementById("EMAIL");
@@ -7,6 +7,7 @@ const messages = document.getElementById("msg");
 const profileName = document.getElementById("username");
 const profileRating = document.getElementById("rating");
 const textMessage = document.getElementById("textMessage");
+const rating = document.getElementById("")
 
 var trucy = false;
 
