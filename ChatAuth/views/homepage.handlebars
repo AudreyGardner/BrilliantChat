@@ -1,11 +1,8 @@
-<div class="col-md-4 card">
 {{#each users as |user| }}
 <div class="row align-center mb-5">
-  <div class="col-sm-5">
-    <h4>{{{get_emoji}}}{{user.username}}<br><a href="mailto:{{user.email}}">{{user.email}}</a><br>{{user.zodiac}}</h4>
-    <h4></h4>
+  <div class="col-md-5">
+    <h2>{{user.username}}<br>{{{get_emoji}}}{{user.zodiac}}</h2>
+    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
   </div>
 </div>
-
 {{/each}}
-</div>
