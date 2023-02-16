@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRILLIANT CHAT</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+            <div class="mainSidebar">
+                
+                <div class="profile" >
+                    
+                    <p id="username"></p>
+                    
+                    
+                </div>
+            </div>
+            <div>
+                <a href="index.html" class="singout-btn">SIGN-OUT</a>
+            </div>
+        </div>
+        <div class="chatPanel">
+            <div class="textarea" id="textarea">
+                 
+                
+            </div>
+            <div class="actionContainer">
+                <div>
+                    <img src="assets/x.png" alt="" width="30px" />
+                </div>
+                <input type="text" class="message" id="textMessage" placeholder="enter message" />
+                <div onclick="addMessage()">
+                    <img src="assets/v.png" alt="" width="30px" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
