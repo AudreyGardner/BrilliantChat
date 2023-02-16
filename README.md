@@ -27,3 +27,5 @@ It is displayed in your profile on the left
 ```
 
 ---
+### Deployment
+[Deployed App](https://brilliant.herokuapp.com/)
